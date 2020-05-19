@@ -1,0 +1,20 @@
+galaxy_info:
+  author: bit_kitchen
+  role_name: iptables_save
+
+  description: Installs the package for iptables rule persistence and listens to "iptables-save" and "ip6tables-save" for rule persistence
+  license: MIT
+
+  min_ansible_version: 2.4
+
+  # https://galaxy.ansible.com/api/v1/platforms/
+  platforms:
+  - name: EL
+    versions:
+    - 8
+
+  galaxy_tags:
+  - iptables
+  - ip6tables
+
+dependencies: []

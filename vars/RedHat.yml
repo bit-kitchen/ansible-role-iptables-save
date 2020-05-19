@@ -1,0 +1,3 @@
+---
+iprules: /etc/sysconfig/iptables
+ip6rules: /etc/sysconfig/ip6tables

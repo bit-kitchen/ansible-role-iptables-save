@@ -1,0 +1,19 @@
+---
+- name: Include RedHat variables
+  include_vars: RedHat.yml
+
+- name: Install iptables-services
+  dnf:
+    name: iptables-services
+  notify:
+  - iptables-save
+  - ip6tables-save
+
+- name: Persist current iptables rules
+  meta: flush_handlers
+
+- name: Enable iptables service now
+  systemd:
+    name: iptables
+    enabled: yes
+    state: started

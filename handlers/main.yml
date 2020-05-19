@@ -1,0 +1,6 @@
+---
+- name: iptables-save
+  shell: iptables-save > {{ iprules }}
+
+- name: ip6tables-save
+  shell: ip6tables-save > {{ ip6rules }}
