@@ -3,7 +3,7 @@
   include_vars: RedHat.yml
 
 - name: Install iptables-services
-  dnf:
+  yum:
     name: iptables-services
   notify:
   - iptables-save
