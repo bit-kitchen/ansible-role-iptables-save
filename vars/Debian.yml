@@ -1,0 +1,3 @@
+---
+iprules: /etc/iptables/rules.v4
+ip6rules: /etc/iptables/rules.v6

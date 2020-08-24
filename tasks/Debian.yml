@@ -1,0 +1,13 @@
+---
+- name: Include Debian variables
+  include_vars: Debian.yml
+
+- name: Install iptables-persistent
+  apt:
+    name: iptables-persistent
+  notify:
+  - iptables-save
+  - ip6tables-save
+
+- name: Persist current iptables rules
+  meta: flush_handlers
